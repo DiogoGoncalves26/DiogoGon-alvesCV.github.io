@@ -8,6 +8,7 @@ body {
 
 .container {
     display: flex;
+    flex-wrap: wrap;
     max-width: 1200px;
     margin: 50px auto;
     background: white;
@@ -19,7 +20,7 @@ body {
 .sidebar {
     background-color: #2c3e50;
     color: white;
-    width: 30%;
+    width: 100%;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -42,6 +43,7 @@ body {
 .sidebar p, .sidebar ul {
     line-height: 1.6;
     font-size: 16px;
+    word-wrap: break-word;
 }
 
 .sidebar ul {
@@ -57,6 +59,7 @@ body {
     transition: background 0.3s;
     display: flex;
     align-items: center;
+    word-wrap: break-word;
 }
 
 .sidebar ul li i {
@@ -75,7 +78,7 @@ body {
 }
 
 .main-content {
-    width: 70%;
+    width: 100%;
     padding: 40px;
     box-sizing: border-box;
 }
@@ -117,6 +120,7 @@ section p {
     display: flex;
     align-items: flex-start;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .institution-logo, .company-logo {
@@ -174,6 +178,7 @@ section p {
     display: flex;
     align-items: flex-start;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .voluntary-item .company-logo {
@@ -213,3 +218,56 @@ section p {
     color: #1abc9c;
 }
 
+@media (min-width: 768px) {
+    .sidebar {
+        width: 40%;
+    }
+
+    .main-content {
+        width: 60%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 35%;
+    }
+
+    .main-content {
+        width: 65%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sidebar {
+        width: 30%;
+    }
+
+    .main-content {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .sidebar {
+        width: 25%;
+    }
+
+    .main-content {
+        width: 75%;
+    }
+}
+
+@media (min-width: 1920px) {
+    .sidebar {
+        width: 30%;
+    }
+
+    .main-content {
+        width: 70%;
+    }
+}
